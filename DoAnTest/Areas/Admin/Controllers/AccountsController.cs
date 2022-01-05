@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DoAnTest.Areas.Admin.Models;
 using DoAnTest.Data;
+using Microsoft.AspNetCore.Http;
 
 namespace DoAnTest.Areas.Admin.Controllers
 {
@@ -21,13 +22,20 @@ namespace DoAnTest.Areas.Admin.Controllers
         }
 
         // GET: Admin/Accounts
+        
         public async Task<IActionResult> Index()
         {
+            if(HttpContext.Session.GetString("Role")==null)
+            {
+                return RedirectToAction("Login", "Accounts");
+            }
             return View(await _context.Accounts.ToListAsync());
         }
 
         public async Task<IActionResult> Login()
+           
         {
+           
             return View(await _context.Accounts.ToListAsync());
         }
         // GET: Admin/Accounts/Details/5
@@ -66,6 +74,11 @@ namespace DoAnTest.Areas.Admin.Controllers
                 _context.Add(accounts);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
+                
+            }
+            if (HttpContext.Session.GetString("Page") == "Login")
+            {
+                return RedirectToAction("Login", "Accounts");
             }
             return View(accounts);
         }
@@ -77,9 +90,12 @@ namespace DoAnTest.Areas.Admin.Controllers
             List<Accounts> lst = await _context.Accounts.ToListAsync();
             for(int i=0;i<lst.Count;i++)
             {
-                if (username == lst[i].Username && password == lst[i].Password) ;
+                if (username == lst[i].Username && password == lst[i].Password)
+                {
+                    HttpContext.Session.SetString("Role", "admin");
 
-                return RedirectToAction("Index", "Accounts");
+                    return RedirectToAction("Index", "Accounts");
+                }
             }
             return RedirectToAction("Login", "Accounts");
         }
