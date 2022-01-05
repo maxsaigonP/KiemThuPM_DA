@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ASP.NET\\mssv\\DoAnTest\\DoAnTest.csproj": {}
+    "D:\\kiem thu phan mem\\KiemThuPM_DA\\DoAnTest\\DoAnTest.csproj": {}
   },
   "projects": {
-    "D:\\ASP.NET\\mssv\\DoAnTest\\DoAnTest.csproj": {
+    "D:\\kiem thu phan mem\\KiemThuPM_DA\\DoAnTest\\DoAnTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ASP.NET\\mssv\\DoAnTest\\DoAnTest.csproj",
+        "projectUniqueName": "D:\\kiem thu phan mem\\KiemThuPM_DA\\DoAnTest\\DoAnTest.csproj",
         "projectName": "DoAnTest",
-        "projectPath": "D:\\ASP.NET\\mssv\\DoAnTest\\DoAnTest.csproj",
-        "packagesPath": "C:\\Users\\BAO PHUC- PC\\.nuget\\packages\\",
-        "outputPath": "D:\\ASP.NET\\mssv\\DoAnTest\\obj\\",
+        "projectPath": "D:\\kiem thu phan mem\\KiemThuPM_DA\\DoAnTest\\DoAnTest.csproj",
+        "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
+        "outputPath": "D:\\kiem thu phan mem\\KiemThuPM_DA\\DoAnTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\BAO PHUC- PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\thanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -79,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
